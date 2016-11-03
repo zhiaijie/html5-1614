@@ -1,0 +1,18 @@
+{
+	"author":"Yst",
+	"name":"MrsYu",
+	"version":"0.1.0",
+	"description":"myNodeJsApp",
+	"main":"myNodeJsApp",
+	"dependencies":{},
+	"repository":{
+		"type":"git",
+		"url":""
+	},
+	"engines":{
+		"node":"*"
+	},
+	"keywords" : [
+		"tool" , "print"
+	]
+}
