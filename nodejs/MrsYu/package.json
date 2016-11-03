@@ -7,7 +7,7 @@
 	"dependencies":{},
 	"repository":{
 		"type":"git",
-		"url":""
+		"url":"https://github.com/zhiaijie/html5-1614/tree/master/nodejs"
 	},
 	"engines":{
 		"node":"*"
