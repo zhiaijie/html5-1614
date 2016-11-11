@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>cityWalk</title>
+		<style type="text/css">
+			.show-div{
+				width: 1583px;
+				height: 2350px;
+				background: #33312e;
+				position: relative;
+			}
+			.show-bg{
+				width: 1583px;
+				height: 420px;
+				background: url(images/main-bg.jpg) no-repeat -200px -15px;
+			}
+			.show-ul{
+				width: 1160px;
+				height: 100px;
+				background: #fff;
+				margin-left: 212px;
+			}
+			.show-ul>li{
+				font-size: 16px;
+				display: inline-block;
+				line-height: 100px;
+				padding-left: 20px;
+				color: #636363;
+			}
+			.show-ul>li:hover a{
+				text-decoration: underline;
+			}
+			.show-ul>li:nth-of-type(2) a{
+				color: #fff;
+				background: green;
+			}
+			.show-div .show-box{
+				width: 1160px;
+				height: 280px;
+				background: #fff;
+				margin: 20px 0px 20px 212px;
+				position: relative;
+			}
+			.page{
+				width: 1583px;
+				height: 50px;
+				background: #33312e;
+				/*margin-left: 212px;*/
+				position: absolute;
+				left: 0px;
+				top: 2350px;
+				padding-left: 1100px;
+			}
+			.page button{
+				width: 30px;
+				height: 30px;
+				border: 1px solid #ccc;
+				outline: none;
+			}
+			.page button:focus{
+				background: #1CB041;
+			}
+			.show-img{
+				width: 420px;
+				height: 280px;
+			}
+			.show-p{
+				width: 740px;
+				height: 56px;
+				/*background: pink;*/
+				position: absolute;
+				left: 420px;
+				top: 0;
+			}
+			.show-h1{
+				width: 740px;
+				height: 68px;
+				/*background: red;*/
+				position: absolute;
+				left: 420px;
+				top: 56px;
+			}
+			.show-pp{
+				width: 740px;
+				height: 100px;
+				/*background: pink;*/
+				position: absolute;
+				left: 420px;
+				top: 124px;
+			}
+			.show-a{
+				width: 740px;
+				height: 56px;
+				position: absolute;
+				left: 420px;
+				top: 224px;
+				/*background: blue;*/
+			}
+			.show-a a{
+				width: 174px;
+				height: 56px;
+				display: block;
+				position: absolute;
+				right: 0px;
+				bottom: 0;
+				background: url(images/city-01.gif) no-repeat;
+			}
+			.show-p-p1{
+				width: 40px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border: 1px solid #ccc;
+				margin: 10px 0 10px 10px;	
+				float: left;			
+			}
+			.show-p-p2{
+				/*margin: 10px 0 10px 10px;*/	
+				float: right;	
+				height: 30px;
+				margin: 10px 20px 10px 0px;	
+				line-height: 30px;		
+			}
+			.show-p-p2 span{
+				color: #1CB041;
+			}
+			.show-h1 h1{
+				color: #000;
+				text-indent: 5px;
+				padding-left: 10px;
+			}
+			.show-h1 h1:hover{
+				color: #1CB041;
+			}
+			.show-pp{
+				padding-left: 40px;
+				line-height: 20px;
+				color: #1CB041;
+				font-size: 13px;
+			}
+			.show-pp-p4{
+				padding: 0 20px 0 530px;
+				display: inline-block;
+				text-decoration: line-through;
+			}
+			.show-pp-p5{
+				display: inline-block;
+			}
+			.show-pp-p5 .show-pp-span2{
+				color: darkgreen;
+				font-size: 30px;
+			}
+		</style>
+		<link rel="stylesheet" href="css/index.css">
+		<script data-main= "js/city.js" src="js/lib/require.js"></script>
+	</head>
+	<body>
+		<!-- 隐藏广告 -->
+		<div class="header-ad">
+			<a href="#"></a>
+			<span></span>
+		</div>
+	
+		<!-- 头部导航 -->
+		<div class="header-nav">
+			<a href="#"></a>
+			<div class="header-nav-left">
+				<ul class="header-nav-ul">
+					<li class="header-nav-li"><a href="#" class="header-nav-a">目的地</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">锦囊</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">行程助手</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">社区∨</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">世界游·自由行</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">机票</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">酒店</a></li>
+					<li class="header-nav-li"><a href="#" class="header-nav-a">预定∨</a></li>
+				</ul>
+			</div>
+			<div class="header-nav-right">
+				<div class="header-nav-sousu">
+					<input type="text" name="" id="" value="" />
+					<ul class="hideUl"></ul>
+					<a href="#"></a>
+				</div>
+				<div class="header-nav-login">
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#">注册</a>
+					<a href="#">登陆</a>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 头部 -->
+		<div class="header">
+			<a href="#" class="header-bg"></a>
+			<div class="header-form">
+				<form action="">
+					<input type="text" value="搜索国家、城市、产品">
+					<button class="header-btn">搜索</button>
+				</form>			
+			</div>
+			<div class="header-app">
+				<!-- <img src="images/header-02.gif" alt=""> -->
+				<a href="#" class="header-app-a">
+					<p class="header-app-img"></p>
+					<p class="header-app-p">APP</p>
+				</a>
+			</div>
+			
+		</div>
+	
+		<!-- 导航 -->
+		<div class="nav">
+			<ul class="nav-ul">
+						
+			</ul>
+		</div>
+		
+		<!--主体-->
+		<div class="show-div">
+			<div class="show-bg"></div>
+			<ul class="show-ul">
+				<li>所在城市</li>
+				<li><a href="#">全部</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京就</a></li>
+				<li><a href="#">北京北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京</a></li>
+				<li><a href="#">北京北京</a></li>
+				<li><a href="#">北京</a></li>
+			</ul>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="show-box">
+				<div class="show-img">
+					<img src=""/>
+				</div>
+				<div class="show-p">
+					<p class="show-p-p1"></p>
+					<p class="show-p-p2"><span class="show-p-span1"></span> 次浏览 <span class="show-p-span2"></span> 件已售</p>
+				</div>
+				<div class="show-h1"><a href="#"><h1></h1></a></div>
+				<div class="show-pp">
+					<p class="show-pp-p1"></p>
+					<p class="show-pp-p2"></p>
+					<p class="show-pp-p3"></p>
+					<p class="show-pp-p4"><span class="show-pp-span1"></span>元</p>
+					<p class="show-pp-p5"><span class="show-pp-span2"></span> 元起</p>
+				</div>
+				<div class="show-a"><a href="#"></a></div>
+			</div>
+			<div class="page"></div>	
+		</div>
+		
+		
+		 <!--页脚上--> 
+		<div class="footer-top">
+			<ul class="footer-top-ul1">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">机酒自由行</a></li>
+				<li><a href="#">城市玩乐</a></li>
+				<li><a href="#">签证</a></li>
+				<li><a href="#">租车</a></li>
+				<li><a href="#">邮轮</a></li>
+				<li><a href="#">海岛游</a></li>
+				<li><a href="#">限时特卖</a></li>
+				<li><a href="#">特色线路</a></li>
+				<li><a href="#">CityWalt</a></li>
+			</ul>
+			<div class="footer-top-div">
+				<ul class="footer-top-ul2">
+					<li><a href="#"><h3>专业拨正</h3><p>我们首届了很古董真阳硕大的是我和东方达到的打算打打打阿萨德撒</p></a></li>
+				</ul>
+				<ul class="footer-top-ul2">
+					<li><a href="#"><h3>专业拨正</h3><p>我们首届了很古董真阳硕大的是我和东方达到的打算打打打阿萨德撒</p></a></li>
+				</ul>
+				<ul class="footer-top-ul2">
+					<li><a href="#"><h3>专业拨正</h3><p>我们首届了很古董真阳硕大的是我和东方达到的打算打打打阿萨德撒</p></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+	
+		 <!--页脚下--> 
+		<div class="footer-bottom">
+			<div class="footer-left">
+				<div>萨达萨达萨达的阿的萨达范德萨发发发发阿福萨达萨达萨达的阿的萨达范德萨发发阿福撒啊大大的 撒大大阿顶顶撒啊大大的 撒大大阿顶顶顶</div>
+				<ul class="footer-left-ul1">
+					<li><a href="#">设计界习惯·暗道</a>|</li>
+					<li><a href="#">设计界习惯</a>|</li>
+					<li><a href="#">设计界习</a>|</li>
+					<li><a href="#">设计界习暗道</a>|</li>
+					<li><a href="#">设计界习</a>|</li>
+					<li><a href="#">设计暗道</a></li>
+				</ul>
+				<p>sadadad撒大大撒的14124dafa大大的啊的撒大的萨达 达adadsaddad的撒大大</p>
+				<ul class="footer-left-ul2">
+					<li>友情链接：</li>
+					<li><a href="#">美国旅游</a></li>
+					<li><a href="#">美国旅游</a></li>
+					<li><a href="#">美国旅游</a></li>
+					<li><a href="#">美国旅游</a></li>
+				</ul>
+			</div>
+			<div class="footer-right">
+				<ul class="footer-right-ul1">
+					<li>联系我们</li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
