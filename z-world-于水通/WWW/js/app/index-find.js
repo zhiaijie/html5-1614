@@ -54,12 +54,26 @@ define(['jquery','myutil','app/myfn1'],function($,x,url){
 						hideLi.append(hideA);
 						hideA.html(elem.word);
 						hideA.attr('href',elem.url);
+						var handleIn = function (e){
+							hideLi.css('background','#ccc')
+						}
+						var handleOut = function (e){
+							hideLi.css('background','#fff')
+						}
+						hideLi.hover(handleIn,handleOut);
+						// hideLi.bind('mouseenter mouseleave',handleInOut);
 //						console.log(arry);
 						console.log(elem.url)
 					})
 				}
 			})
+			input.blur(function(e){
+				hideUl.html('');
+				input.val('')
+				hideUl.css('display','none');
+			})
 		})
+		
 	}
 	return getFindData;
 })

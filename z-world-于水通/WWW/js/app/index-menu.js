@@ -24,10 +24,11 @@ define(['myutil','app/myfn1','jquery'],function (x, url,$) {
                 	var divShow = document.createElement('div');
                 	divShow.setAttribute('class','divShow');
                     li.appendChild(divShow);
-                	for (var i = 0; i < menus[index].mainCity.length; i++) {
+                	for (var i = 0; i < elem.mainCity.length; i++) {
 		                var a1 = document.createElement('a');
+		                a1.setAttribute('href','#')
 	                    divShow.appendChild(a1);
-                    	a1.innerHTML = menus[index].mainCity[i];
+                    	a1.innerHTML = elem.mainCity[i];
                 	}
                 	
                 	$('.banner-ul').css('position','relative');
@@ -44,9 +45,10 @@ define(['myutil','app/myfn1','jquery'],function (x, url,$) {
                     $('.banner-li div a').css({
                     	'font-size': '16px',
                     	'padding': '5px 4px 0 0',
+                    	'color': '#ccc'
                     });
                     $('.banner-li:first').css({
-                    	'height': '67px',
+                    	'height': '67px'
                     });
 					$('.banner-li:last').css({
 						'border': 'none'
@@ -59,42 +61,65 @@ define(['myutil','app/myfn1','jquery'],function (x, url,$) {
 					$('.banner-ul:eq(5)').css('background', 'url(images/banner-07.gif) no-repeat 10px 10px');
                 	$('.banner-ul:eq(6)').css('background', 'url(images/banner-08.gif) no-repeat 10px 10px');
                 	
+                	
+
 					var divHide = document.createElement('div');
 					divHide.setAttribute('class','divHide');
 	                li.appendChild(divHide);
 					
-					var moreCity = menus[index].moreCity;
+					var moreCity = elem.moreCity;
 					for (var j = 0; j < moreCity.length; j++) {
+						var hideHideBox = document.createElement('div');
+						hideHideBox.setAttribute('class','hideHideBox');
+		                divHide.appendChild(hideHideBox);
 						var hideH3 = document.createElement('h3');
+	                	hideHideBox.appendChild(hideH3);	                	
 						hideH3.setAttribute('class','hideH3');
-	                	divHide.appendChild(hideH3);	                	
-						hideH3.setAttribute('class','hideH3');
-						hideH3.innerHTML = moreCity[j].cityName;
-						
 						var divHideNr = document.createElement('div');
 						divHideNr.setAttribute('class','divHideNr');
-	                	divHide.appendChild(divHideNr);
+	                	hideHideBox.appendChild(divHideNr);
+
+	                	
+	                	
+
+						hideH3.innerHTML = moreCity[j].cityName;
+//						console.log(moreCity.length)
 						
-						var items = moreCity[j].items;
-						for (var k = 0; k < items.length; k++) {
+						
+						var divImg = document.createElement('div');
+						divImg.setAttribute('class','divImg');
+	                	hideHideBox.appendChild(divImg);
+						for (var k = 0; k < moreCity[j].items.length; k++) {
+							if(moreCity[j].items[k].length>30){
+								var hideImg = document.createElement('img');
+								hideImg.src = moreCity[j].items[k];
+	               	 			divImg.appendChild(hideImg);
+								hideImg.style.height = '120px';
+								hideImg.style.width = '160px';
+
+							}else{
 								var hideA = document.createElement('a');
 								hideA.setAttribute('class','hideA');
 								hideA.setAttribute('href','#');
-								hideA.innerHTML = items[k];
+								hideA.innerHTML = moreCity[j].items[k];
 	                			divHideNr.appendChild(hideA);
-								
-//								var hideImg = document.createElement('img');
-//								hideImg.src = menus[index].moreCityImg;
-//	                			$('.divHideNr:eq(2)').append(hideImg);
+							}
+							
 						}
 					}
+					var hideImg1 = document.createElement('img');
+	                var divImg1 = document.createElement('div');
+					hideImg1.src = elem.moreCityImg;
+	               	divImg1.appendChild(hideImg1);
+	               	hideHideBox.appendChild(divImg1);
+
+	               	hideImg1.style.width = '300px';
 					
 					$('.divHide').css({
 						'width': '700px',
 						'height': '420px',
 						'display': 'none',
-						'overflow': 'hidden',
-//						'background': 'red'
+						'overflow': 'hidden'
 					});
 					$('.divHide:eq(0)').css({
 						'position': 'absolute',
@@ -136,19 +161,28 @@ define(['myutil','app/myfn1','jquery'],function (x, url,$) {
 						'font-size': '24px',
 						'border-bottom': '1px solid #ccc',
 						'line-height': '36px',
-						'padding-left': '10px'
+						'padding-left': '20px'
 					})
 					$('.divHideNr').css({
 						'display': 'inline-block',
 						'width': '300px',
+						'margin': '10px 10px'						
+					})
+					$('.hideHideBox').css({
+						'width': '350px',
 						'float': 'left'
-//						'margin': '10px 10px'						
+					})
+					$('.divImg').css({
+						'display': 'inline-block',
+						'width': '600px',
+						'margin': '10px 100px'						
 					})
 					$('.hideA').css({
+						'font-size': '16px',
 						'display': 'inline-block',
-						'padding': '5px 2px'
+						'padding': '5px 2px',
+						'color': '#ccc'
 					})
-//					
 //					
 					$('.banner-li')[index].onmouseenter = function(e){
 						$('.divHide')[index].style.display = 'block';
